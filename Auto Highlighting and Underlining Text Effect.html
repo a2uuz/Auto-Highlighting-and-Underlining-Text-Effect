@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Auto Highlighting and Underlining Text Effect</title>
+</head>
+<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro:300'>
+<style>
+body {
+  font-family: 'Source Code Pro', sans-serif;
+}
+
+.wrap {
+  padding: 1% 2%;
+}
+
+.underlined {
+  color: black;
+  flex: 1;
+  font-size: 1em;
+  line-height: 1.2;
+  text-decoration: none;
+  background-image: linear-gradient(to right, yellow 0, yellow 100%);
+  background-position: 0 1.2em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background .5s;
+}
+.underlined:hover {
+  background-size: 100% 100%;
+}
+.underlined--thin {
+  background-image: linear-gradient(to right, black 0, black 100%);
+}
+.underlined--thick {
+  background-position: 0 -0.1em;
+}
+.underlined--offset {
+  background-position: 0 0.2em;
+  box-shadow: inset 0 -.5em 0 0 white;
+}
+.underlined--gradient {
+  background-position: 0 -0.1em;
+  background-image: linear-gradient(to right, yellow 0, lightgreen 100%);
+}
+.underlined--reverse {
+  background-position: 100% -0.1em;
+  transition: background 1s;
+  background-image: linear-gradient(to right, yellow 0, yellow 100%);
+}
+p{
+margin-top: 1em;
+}
+</style>
+
+<div class="wrap">
+<p><a href="#" class="underlined underlined--thin">I'm a very long text with an underline effect</a></p>
+<p><a href="#" class="underlined underlined--thick">I'm another very long highlighted link.</a></p>
+<p><a href="#" class="underlined underlined--offset">I'm another very long link and I'm an artist you know.</a></p>
+<p><a href="#" class="underlined underlined--gradient">I am Rainbow</a></p>
+<p><a href="#" class="underlined underlined--reverse">I'm another long link and I don't like lorem.</a></p>
+
+
+</body>
+</html>
